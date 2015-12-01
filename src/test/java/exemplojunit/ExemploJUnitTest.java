@@ -10,9 +10,13 @@ public class ExemploJUnitTest {
 
     private String minhaString = "minhaString Inicial";
 
+    public ExemploJUnitTest() {
+        System.out.println("Construtor");
+    }
+
     @BeforeClass
     public static void oneTimeSetUp() {
-        System.out.println("@BeforeClass - inicializacao uma ves para todos os testes\n");
+        System.out.println("@BeforeClass - inicializacao uma ves para todos os testes");
     }
 
     @AfterClass
