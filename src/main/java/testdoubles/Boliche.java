@@ -9,8 +9,6 @@ public class Boliche {
     private EmailService mailer;
 
     public Boliche() {
-        this.produto = produto;
-        this.quantidade = quantidade;
     }
 
     public void setMailer(EmailService mailer) {
