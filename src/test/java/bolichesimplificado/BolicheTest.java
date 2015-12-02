@@ -1,7 +1,6 @@
-package boliche;
+package bolichesimplificado;
 
 import org.junit.Before;
-import org.junit.Ignore;
 import org.junit.Test;
 
 import static org.junit.Assert.assertEquals;
@@ -21,22 +20,13 @@ public class BolicheTest {
         }
     }
 
-    private void jogarSpare() {
-        b.jogar(5);
-        b.jogar(5);
-    }
-
-    private void jogarStrike() {
-        b.jogar(10);
-    }
-
     private void assertPontuacao(int esperado) {
         assertEquals(esperado, b.pontuacaoFinal());
     }
 
     @Test
     public void bolaNaCanaletaJogoInteiro() {
-        jogarVarias(20, 0);
+        jogarVarias(20,  0);
         assertPontuacao(0);
     }
 
@@ -47,26 +37,9 @@ public class BolicheTest {
     }
 
     @Test
-    public void umSpare() {
-        jogarSpare();
-        b.jogar(3);
-        jogarVarias(17, 0);
-        assertPontuacao(16);
-    }
-
-    @Test
-    public void umStrike() {
-        jogarStrike();
-        b.jogar(3);
-        b.jogar(4);
-        jogarVarias(16, 0);
-        assertPontuacao(24);
-    }
-
-    @Test
     public void jogoPerfeito() {
-        jogarVarias(12, 10);
-        assertPontuacao(300);
+        jogarVarias(20, 10);
+        assertPontuacao(200);
     }
 
 }
